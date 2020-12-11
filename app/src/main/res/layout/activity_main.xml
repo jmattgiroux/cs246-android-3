@@ -7,13 +7,15 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Welcome To Rock Paper Scissors 9000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.481"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/playGameButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.15" />
 
@@ -22,15 +24,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Play"
-        tools:layout_editor_absoluteX="156dp"
-        tools:layout_editor_absoluteY="253dp" />
+        app:layout_constraintBottom_toTopOf="@+id/topScoresButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <Button
         android:id="@+id/topScoresButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="See Top Scores"
-        tools:layout_editor_absoluteX="156dp"
-        tools:layout_editor_absoluteY="399dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playGameButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
