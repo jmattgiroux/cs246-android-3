@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RockPaperScissor">
-        <activity android:name=".RecordsScreen"></activity>
+        <activity android:name=".MakeNewRecord"></activity>
+        <activity android:name=".RecordsScreen" />
         <activity android:name=".GameScreen" />
         <activity android:name=".MainActivity">
             <intent-filter>

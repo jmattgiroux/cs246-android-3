@@ -4,55 +4,57 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GameScreen">
-
-    <Button
-        android:id="@+id/rockButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Rock"
-        app:layout_constraintBottom_toTopOf="@+id/paperButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/resultsText" />
-
-    <Button
-        android:id="@+id/paperButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Paper"
-        app:layout_constraintBottom_toTopOf="@+id/scissorsButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rockButton" />
-
-    <Button
-        android:id="@+id/scissorsButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Scissors"
-        app:layout_constraintBottom_toTopOf="@+id/quitButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/paperButton" />
+    tools:context=".MakeNewRecord">
 
     <TextView
-        android:id="@+id/resultsText"
+        android:id="@+id/pointsText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Score: 0 "
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/rockButton"
+        android:text="Points: "
+        app:layout_constraintBottom_toTopOf="@+id/highScoreText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gameBackButton" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/highScoreText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New High Score! Would you like to record it? If so, please input your name:"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/nameField"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pointsText" />
 
     <Button
-        android:id="@+id/quitButton"
+        android:id="@+id/confirmRecordButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Record"
+        app:layout_constraintBottom_toTopOf="@+id/makeRecordQuitButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameField" />
+
+    <EditText
+        android:id="@+id/nameField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Input Name Here:"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/confirmRecordButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/highScoreText" />
+
+    <Button
+        android:id="@+id/makeRecordQuitButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Quit"
@@ -60,16 +62,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scissorsButton" />
-
-    <Button
-        android:id="@+id/gameBackButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:text="Back"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/confirmRecordButton" />
 </androidx.constraintlayout.widget.ConstraintLayout>

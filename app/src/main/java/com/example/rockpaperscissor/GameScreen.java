@@ -6,8 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-
-// https://docs.oracle.com/javase/8/docs/api/java/util/Random.html
+import android.widget.TextView;
 
 
 public class GameScreen extends AppCompatActivity {
@@ -15,6 +14,14 @@ public class GameScreen extends AppCompatActivity {
 
     Button rock, paper, scissors, quit, back;
 
+    TextView result;
+
+    Game game;
+
+    public void updateResultsText(){
+        result.setText(game.returnResultTextString());
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,10 +34,16 @@ public class GameScreen extends AppCompatActivity {
         quit = (Button) findViewById(R.id.quitButton);
         back = (Button) findViewById(R.id.gameBackButton);
 
+        game = new Game();
+
+        result = (TextView) findViewById(R.id.resultsText);
+
         rock.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
+                game.play(1);
+                updateResultsText();
             }
         });
 
@@ -38,6 +51,8 @@ public class GameScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                game.play(2);
+                updateResultsText();
             }
         });
 
@@ -45,6 +60,8 @@ public class GameScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                game.play(3);
+                updateResultsText();
             }
         });
 
@@ -63,6 +80,8 @@ public class GameScreen extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
 
 
     }
