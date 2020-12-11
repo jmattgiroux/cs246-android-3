@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         playButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Game.class);
+                Intent intent = new Intent(MainActivity.this, GameScreen.class);
                 startActivity(intent);
             }
         });
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         recordsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Records.class);
+                Intent intent = new Intent(MainActivity.this, RecordsScreen.class);
                 startActivity(intent);
             }
         });
