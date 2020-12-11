@@ -8,7 +8,7 @@ The Rock Paper Scissors game is
 After losing or quitting, the player is prompted to input their name.
 Upon starting the program, the player can choose to either play or view the top ten high scores.
 
-Records of all recorded scores are recorded in a file called save.txt
+"Records of all recorded scores are recorded in a file called save.txt
 Upon playing, recording your score, restarting the program, and choosing to view the high scores, you will see the score you recorded (provided it's within the top 10 high scores, of course)."
 
 - Have at least one screen
